@@ -1,7 +1,7 @@
 .label {
   position: absolute;
-  top: 13px;
-  left: 16px;
+  top: 10px;
+  left: 10px;
   z-index: 10;
   
   &--card {
@@ -11,18 +11,6 @@
     .label__block {
       width: 72px;
       height: 72px;
-      
-      &--hardness {
-        padding-top: 10px;
-        font-weight: 800;
-        font-size: 9px;
-        text-transform: uppercase;
-      }
-      
-      &--kg {
-        padding-top: 18px;
-        font-size: 18px;
-      }
     }
   }
 }
@@ -30,7 +18,7 @@
 .label__block {
   width: 65px;
   height: 65px;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,6 +26,7 @@
   line-height: 1;
   text-align: center;
   color: #fff;
+  text-transform: uppercase;
   background-image: url(../img/icons/label-sale.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -49,13 +38,5 @@
   
   &--hit {
     background-image: url(../img/icons/label-hit.svg);
-  }
-  
-  &--hardness {
-    background-image: url(../img/icons/label-hardness.svg);
-  }
-  
-  &--kg {
-    background-image: url(../img/icons/label-kg.svg);
   }
 }
