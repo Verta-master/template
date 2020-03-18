@@ -1,0 +1,84 @@
+.form {
+  width: 100%;
+}
+
+.form__reqiured {
+  width: 100%;
+  position: relative;
+  background-image: url(../img/icons/required.svg);
+  background-repeat: no-repeat;
+  background-size: 11px 11px;
+  background-position: right 16px top 16px;
+}
+
+.form__select select,
+.form__message,
+.form__input {
+  display: block;
+  width: 100%;
+  border: 1px solid #E0E4E7;
+  border-radius: 4px;
+  background-color: rgba(255,255,255,0);
+  
+  &::placeholder {
+    color: #99A3AE;
+    opacity: 1;
+  }
+}
+
+.form__input {
+  height: 46px;
+  padding-left: 16px;
+  padding-right: 30px;
+  margin-bottom: 12px;
+}
+
+.form__message {
+  max-width: 100%;
+  height: 118px;
+  min-height: 118px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.form__btn {
+  width: 100%;
+  margin-top: 23px;
+}
+
+.form__select select {
+  height: 46px;
+  padding-left: 16px;
+  color: #99A3AE;
+  appearance: none;
+  background-image: url(../img/icons/down.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 8px 5px;
+  outline: none;
+
+  option[disabled] {
+    display: none;
+  }
+  
+  &::-ms-expand {
+    color: transparent;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.form__select {
+  position: relative;
+  margin-bottom: 12px;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 45px;
+    width: 1px;
+    background-color: #E0E4E7;
+  }
+}

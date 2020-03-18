@@ -1,0 +1,37 @@
+.tag {
+  padding-bottom: 24px;
+  
+  .title {
+    margin-top: 20px;
+  }
+}
+
+.tag__list {
+  .reset();
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -16px;
+}
+
+.tag__item {
+  margin-right: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #EBEDEF;
+  border-radius: 16px;
+  overflow: hidden;
+  .transition();
+  
+  a {
+    display: flex;
+    padding: 3px 12px;
+  }
+  
+  &:hover,
+  &:active {
+    color: #fff;
+    background-color: @blue;
+    border-color: @blue;
+    .transition();
+  }
+}

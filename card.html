@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta  name="viewport" content="width=device-width,initial-scale=1">
+  <title>Фабрика Сна</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800&display=swap&subset=cyrillic-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <svg style="display:none">
+    <symbol id="icon-phone">
+      <path d="M0 20C0.0775654 19.7671 0.150938 19.5487 0.226407 19.3304C0.519898 18.4632 0.813389 17.5982 1.10688 16.7331C1.31861 16.1092 1.53034 15.4874 1.73579 14.8615C1.75046 14.8199 1.73788 14.7575 1.71482 14.7201C1.35215 14.1046 1.05657 13.4599 0.834352 12.782C0.631005 12.1664 0.501031 11.5322 0.417176 10.8896C0.343803 10.3177 0.331225 9.74172 0.364767 9.16777C0.410887 8.41082 0.545054 7.66428 0.767269 6.93644C1.13413 5.73656 1.71063 4.64481 2.50096 3.66536C3.17389 2.82939 3.96212 2.12235 4.86775 1.54216C5.90336 0.880876 7.02701 0.423381 8.23661 0.194634C8.73554 0.098976 9.24496 0.0532265 9.75228 0.0178747C10.8864 -0.0569881 11.9933 0.107294 13.0771 0.435859C14.0079 0.716594 14.8758 1.13458 15.6808 1.67941C16.8023 2.43636 17.7289 3.38046 18.4585 4.5138C19.1021 5.51405 19.5507 6.5954 19.7876 7.75786C19.8714 8.16752 19.9133 8.58551 19.9595 8.99933C19.9888 9.25719 20.0035 9.51713 19.9993 9.77707C19.9825 10.8667 19.8169 11.9335 19.45 12.965C18.9113 14.4851 18.0497 15.7952 16.8631 16.8932C15.6913 17.9787 14.3244 18.7315 12.7794 19.1578C12.1673 19.3262 11.5405 19.4281 10.9053 19.4739C9.84871 19.5487 8.80891 19.4656 7.7817 19.2119C6.98508 19.0143 6.2262 18.7211 5.50295 18.3385C5.45264 18.3114 5.37298 18.3052 5.31847 18.3218C4.69585 18.5152 4.07533 18.7169 3.4548 18.9145C2.32906 19.2722 1.20122 19.6298 0.075469 19.9875C0.0566018 19.9896 0.0356382 19.9917 0 20ZM2.49257 17.5566C2.57643 17.5358 2.62674 17.5254 2.67496 17.5108C3.58478 17.2218 4.49879 16.9389 5.40442 16.6374C5.59938 16.5729 5.73774 16.6021 5.90336 16.704C7.0899 17.436 8.38964 17.8207 9.77953 17.8955C10.3812 17.9288 10.9786 17.8851 11.5719 17.7832C12.4419 17.6356 13.2658 17.3528 14.0435 16.9369C15.0812 16.3816 15.9617 15.6413 16.6808 14.7118C17.295 13.9174 17.7478 13.0419 18.0413 12.0833C18.2321 11.4573 18.3432 10.8168 18.3746 10.1659C18.3935 9.76251 18.3683 9.35701 18.339 8.95358C18.295 8.34012 18.1587 7.74122 17.9595 7.16103C17.5801 6.05473 16.9931 5.06487 16.186 4.21227C14.9995 2.95624 13.5635 2.13899 11.8633 1.77923C11.0059 1.59623 10.1422 1.55256 9.27221 1.6503C8.51962 1.73348 7.79218 1.91648 7.0899 2.20137C6.01237 2.63807 5.0711 3.27025 4.2661 4.0979C3.4024 4.98585 2.77139 6.0173 2.37727 7.19222C2.1299 7.93046 1.98945 8.68532 1.9622 9.46098C1.93494 10.2262 2.0146 10.9811 2.20328 11.7256C2.45274 12.703 2.86573 13.6055 3.45271 14.429C3.49254 14.483 3.52189 14.5309 3.49464 14.6078C3.19276 15.4895 2.89508 16.3733 2.5953 17.255C2.56595 17.3445 2.5345 17.4339 2.49257 17.5566Z"/>
+      <path d="M5.26367 7.40072C5.27415 6.50445 5.63682 5.7787 6.31185 5.19643C6.54874 4.99056 6.83175 4.98432 7.12314 5.00927C7.21958 5.01759 7.31811 5.03007 7.41454 5.02799C7.6074 5.02383 7.74786 5.09869 7.82333 5.27545C7.91138 5.48548 7.99314 5.69967 8.07489 5.91386C8.26357 6.40671 8.45014 6.89748 8.63672 7.39032C8.68913 7.52757 8.67445 7.6565 8.60527 7.78959C8.44176 8.10776 8.186 8.35106 7.94073 8.60061C7.74367 8.80232 7.72061 8.91669 7.85897 9.16416C8.50465 10.3245 9.37464 11.2686 10.5528 11.9133C10.775 12.036 11.0077 12.1441 11.2383 12.2502C11.4375 12.3417 11.5821 12.3105 11.7268 12.1483C12.0119 11.8259 12.297 11.5015 12.5758 11.173C12.6848 11.044 12.8211 11.0212 12.9636 11.0752C13.1628 11.1501 13.3556 11.2374 13.5443 11.3352C14.0369 11.591 14.5212 11.8592 15.0139 12.1108C15.2088 12.2107 15.2927 12.3437 15.2675 12.56C15.2277 12.8886 15.1711 13.213 15.0222 13.5104C14.8503 13.8514 14.5443 14.0552 14.2277 14.2423C13.7393 14.5293 13.2026 14.6583 12.6429 14.6104C12.3284 14.5834 12.014 14.4836 11.7163 14.3713C11.123 14.1467 10.5339 13.9075 9.95952 13.6414C9.38093 13.3731 8.8757 12.9842 8.39773 12.5663C7.45437 11.7386 6.71226 10.7488 6.054 9.69236C5.706 9.13296 5.43767 8.54446 5.31818 7.89565C5.28673 7.73345 5.28044 7.565 5.26367 7.40072Z"/>
+    </symbol>
+    <symbol id="icon-mail">
+      <path d="M20.0027 0.544006C19.9066 0.971499 19.805 1.45177 19.6977 1.93204C18.8956 5.52614 18.0936 9.12553 17.2916 12.7196C17.0656 13.7329 16.8397 14.7463 16.6138 15.7596C16.5065 16.2451 16.1054 16.3929 15.6705 16.0974C14.2529 15.1421 12.8408 14.1816 11.4232 13.221C11.361 13.1788 11.3045 13.1366 11.2424 13.0996C10.7849 12.7935 10.4912 12.7988 10.0507 13.1366C9.30511 13.7013 8.5652 14.2713 7.81965 14.836C7.76882 14.8729 7.71799 14.9151 7.66715 14.9521C7.26614 15.2318 6.87642 15.121 6.72957 14.6724C6.40762 13.7171 6.09133 12.7671 5.77503 11.8119C5.53216 11.0835 5.278 10.3605 5.05207 9.62691C4.99559 9.44219 4.88828 9.35775 4.70754 9.29441C3.32375 8.81942 1.94561 8.33915 0.567465 7.85888C0.505335 7.83777 0.443206 7.81666 0.381077 7.79555C0.1608 7.70055 0.00830078 7.55805 0.00830078 7.31528C0.00830078 7.07251 0.143856 6.91945 0.375429 6.83501C0.962833 6.61862 1.54459 6.40752 2.13199 6.19641C7.79141 4.14867 13.4565 2.11148 19.1215 0.0690144C19.6186 -0.110427 19.997 0.0742921 20.0027 0.544006ZM6.0292 9.26802C6.04049 9.34191 6.04049 9.44746 6.06874 9.54774C6.37938 10.5663 6.68438 11.5902 7.01197 12.6088C7.04021 12.7038 7.17577 12.7671 7.26049 12.8516C7.34521 12.7566 7.47512 12.6774 7.49771 12.5719C7.57678 12.1496 7.63891 11.7221 7.67845 11.2947C7.73493 10.7088 7.98345 10.2391 8.45789 9.83274C10.8019 7.82194 13.1232 5.79003 15.4559 3.76867C15.5293 3.70534 15.6141 3.63673 15.6649 3.55757C15.6931 3.51534 15.6875 3.4309 15.6592 3.39396C15.631 3.35701 15.5406 3.34118 15.4898 3.35701C15.4107 3.37812 15.3373 3.42562 15.2695 3.46784C14.0043 4.19617 12.7392 4.92449 11.474 5.65281C9.84733 6.58696 8.22632 7.52111 6.59966 8.45526C6.28336 8.62942 6.04049 8.85636 6.0292 9.26802Z"/>
+    </symbol>
+    <symbol id="icon-down">
+      <path d="M1.76644 0.741797L4.99977 3.97513L8.2331 0.741797C8.5581 0.416797 9.0831 0.416797 9.4081 0.741797C9.7331 1.0668 9.7331 1.5918 9.4081 1.9168L5.5831 5.7418C5.2581 6.0668 4.7331 6.0668 4.4081 5.7418L0.583105 1.9168C0.258105 1.5918 0.258105 1.0668 0.583105 0.741797C0.908105 0.42513 1.44144 0.416797 1.76644 0.741797Z"/>
+    </symbol>
+    <symbol id="icon-like">
+      <path d="M23.39 5.68616C22.2618 3.03427 19.7857 1.327 16.9276 1.23049C16.8306 1.22727 16.7331 1.22559 16.6354 1.22559C14.9887 1.22559 13.3725 1.70786 11.9999 2.59734C10.627 1.70786 9.0111 1.22559 7.36435 1.22559C7.26645 1.22559 7.16933 1.22727 7.07235 1.23049C4.21441 1.32716 1.73808 3.03442 0.609916 5.68616C-0.540616 8.38983 -0.0402649 11.4203 1.91533 13.5946C1.93494 13.6166 1.95547 13.6377 1.97677 13.6581L11.2072 22.4573C11.4291 22.6688 11.7146 22.7745 12 22.7745C12.2854 22.7745 12.571 22.6688 12.7928 22.4573L22.0233 13.6579C22.0447 13.6375 22.0651 13.6164 22.0847 13.5945C24.0403 11.4203 24.5405 8.38998 23.39 5.68616ZM20.4041 12.0266L12 20.0382L3.59578 12.0266C2.26754 10.5262 1.9331 8.44544 2.72438 6.5859C3.51091 4.73769 5.16532 3.59421 7.15002 3.52711C7.22126 3.52466 7.29281 3.52359 7.3645 3.52359C8.79708 3.52359 10.1417 3.99621 11.2552 4.89059C11.6469 5.22456 12.2265 5.26087 12.6609 4.95509C12.6838 4.939 12.706 4.92215 12.7276 4.90453C13.8442 4.00111 15.1955 3.52359 16.6356 3.52359C16.7074 3.52359 16.7791 3.52481 16.8502 3.52711C18.8349 3.59421 20.4891 4.73754 21.2757 6.58575C22.0668 8.44544 21.7324 10.5262 20.4041 12.0266Z"/>
+    </symbol>
+    <symbol id="icon-compare">
+      <path d="M5.45455 8.72727H4.36363V1.09092C4.36363 0.488437 3.8752 0 3.27271 0C2.67023 0 2.18179 0.488437 2.18179 1.09092V8.72727H1.09092C0.488437 8.72727 0 9.2157 0 9.81818V14.1818C0 14.7843 0.488437 15.2727 1.09092 15.2727H2.18184V22.9091C2.18184 23.5116 2.67028 24 3.27276 24C3.87524 24 4.36368 23.5116 4.36368 22.9091V15.2727H5.4546C6.05708 15.2727 6.54552 14.7843 6.54552 14.1818V9.81814C6.54542 9.2157 6.05699 8.72727 5.45455 8.72727ZM2.18179 13.0909V10.9091H4.36359V13.0909H2.18179Z"/>
+      <path d="M22.9092 7.27274H21.8182V1.09092C21.8183 0.488437 21.3298 0 20.7274 0C20.1249 0 19.6364 0.488437 19.6364 1.09092V7.27274H18.5455C17.943 7.27274 17.4546 7.76117 17.4546 8.36366V12.7273C17.4546 13.3298 17.943 13.8182 18.5455 13.8182H19.6364V22.9091C19.6364 23.5116 20.1249 24 20.7274 24C21.3298 24 21.8183 23.5116 21.8183 22.9091V13.8182H22.9092C23.5117 13.8182 24.0001 13.3297 24.0001 12.7272V8.36361C24.0001 7.76117 23.5116 7.27274 22.9092 7.27274ZM19.6365 11.6363V9.45453H21.8183V11.6363H19.6365Z"/>
+      <path d="M14.1816 10.1818H13.0907V1.09092C13.0907 0.488437 12.6023 0 11.9998 0C11.3973 0 10.9089 0.488437 10.9089 1.09092V10.1818H9.81797C9.21549 10.1818 8.72705 10.6702 8.72705 11.2727V15.6363C8.72705 16.2388 9.21549 16.7273 9.81797 16.7273H10.9089V22.9091C10.9089 23.5115 11.3973 24 11.9998 24C12.6023 24 13.0907 23.5115 13.0907 22.909V16.7273H14.1817C14.7841 16.7273 15.2726 16.2388 15.2726 15.6363V11.2727C15.2725 10.6702 14.7841 10.1818 14.1816 10.1818ZM13.0907 14.5454H10.9089V12.3636H13.0907V14.5454Z"/>
+    </symbol>
+    <symbol id="icon-basket">
+      <path d="M0.820312 3.33594H5.85156C6.3038 3.33594 6.67188 3.70401 6.67188 4.15625C6.67188 4.22696 6.56805 3.26694 8.23517 18.2718C7.32108 18.6313 6.67188 19.5222 6.67188 20.5625C6.67188 21.9194 7.77588 23.0228 9.13281 23.0228H10.0941C10.0031 23.2796 9.95312 23.5562 9.95312 23.8438C9.95312 25.2007 11.0571 26.3047 12.4141 26.3047C13.771 26.3047 14.875 25.2007 14.875 23.8438C14.875 23.5562 14.825 23.2796 14.734 23.0228H19.9381C19.8469 23.2796 19.7969 23.5562 19.7969 23.8438C19.7969 25.2007 20.9009 26.3047 22.2578 26.3047C23.6147 26.3047 24.7188 25.2007 24.7188 23.8438C24.7188 22.4868 23.6147 21.3828 22.2578 21.3828H9.13281C8.68057 21.3828 8.3125 21.0147 8.3125 20.5625C8.3125 20.1103 8.68057 19.7422 9.13281 19.7422H24.1492C25.3573 19.7422 26.3782 18.8774 26.5766 17.6859L27.9889 9.21292C28.0284 8.97516 27.9615 8.73184 27.8056 8.54791C27.6497 8.36398 27.4209 8.25781 27.1797 8.25781H24.7188V4.15625C24.7188 3.70316 24.3515 3.33594 23.8984 3.33594H17.3359C16.8828 3.33594 16.5156 3.70316 16.5156 4.15625V4.97656H12.4141C11.961 4.97656 11.5938 5.34378 11.5938 5.79688V8.25781H8.77328L8.31207 4.10626C8.28516 2.7724 7.19183 1.69531 5.85156 1.69531H0.820312C0.367218 1.69531 0 2.06253 0 2.51562C0 2.96872 0.367218 3.33594 0.820312 3.33594ZM13.2344 23.8438C13.2344 24.296 12.8663 24.6641 12.4141 24.6641C11.9618 24.6641 11.5938 24.296 11.5938 23.8438C11.5938 23.3915 11.9618 23.0228 12.4141 23.0228C12.8663 23.0228 13.2344 23.3915 13.2344 23.8438ZM22.2578 24.6641C21.8056 24.6641 21.4375 24.296 21.4375 23.8438C21.4375 23.39 21.8056 23.0234 22.2578 23.0234C22.7101 23.0234 23.0781 23.3915 23.0781 23.8438C23.0781 24.296 22.7101 24.6641 22.2578 24.6641ZM18.1562 4.97656H23.0781V8.25781H18.1562V4.97656ZM13.2344 6.61719H16.5156V8.25781H13.2344V6.61719ZM26.2113 9.89844L24.9584 17.416C24.8922 17.8134 24.5519 18.1016 24.1492 18.1016H9.86703L8.95551 9.89844H26.2113Z"/>
+      <path d="M12.4141 16.4609C12.8672 16.4609 13.2344 16.0937 13.2344 15.6406V12.3594C13.2344 11.9063 12.8672 11.5391 12.4141 11.5391C11.961 11.5391 11.5938 11.9063 11.5938 12.3594V15.6406C11.5938 16.0937 11.961 16.4609 12.4141 16.4609Z"/>
+      <path d="M17.3359 16.4609C17.789 16.4609 18.1562 16.0937 18.1562 15.6406V12.3594C18.1562 11.9063 17.789 11.5391 17.3359 11.5391C16.8828 11.5391 16.5156 11.9063 16.5156 12.3594V15.6406C16.5156 16.0937 16.8828 16.4609 17.3359 16.4609Z"/>
+      <path d="M22.2578 16.4609C22.7109 16.4609 23.0781 16.0937 23.0781 15.6406V12.3594C23.0781 11.9063 22.7109 11.5391 22.2578 11.5391C21.8047 11.5391 21.4375 11.9063 21.4375 12.3594V15.6406C21.4375 16.0937 21.8047 16.4609 22.2578 16.4609Z"/>
+    </symbol>
+  </svg>
+  
+  <header class="header">
+    <div class=" wrapper header__wrap">
+      <button type="button" class="header__menu"></button>
+      <a href="index.html" class="logo">
+        <img src="img/images/logo.png" alt="Logo">
+      </a>
+      <div class="header__block">
+        <span>Ваш город</span>
+        <a data-fancybox data-src="#city" href="javascript:;" class="header__link">
+          <span>Екатеринбург</span>
+          <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+            <use href="#icon-down"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="header__block">
+        <span>ул. Альпинистов 77В</span>
+        <a href="tel:+73433020900" class="header__link">8 (343) 30 20 900</a>
+      </div>
+      <div class="header__block header__block--btns">
+        <a data-fancybox data-src="#call" href="javascript:;" class="header__icon header__icon--call" title="Обратный звонок">
+          <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <use href="#icon-phone"></use>
+          </svg>
+        </a>
+        <a data-fancybox data-src="#call" href="javascript:;" class="header__icon header__icon--mail" title="Написать нам">
+          <svg width="20" height="17" viewBox="0 0 20 17" xmlns="http://www.w3.org/2000/svg">
+            <use href="#icon-mail"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="header__user">
+        <a href="#" class="header__btn header__btn--compare" title="Сравнить">
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <use href="#icon-compare"></use>
+          </svg>
+        </a>
+        <a href="#" class="header__btn header__btn--active header__btn--like" title="Избранное">
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <use href="#icon-like"></use>
+          </svg>
+          <span>8</span>
+        </a>
+        <a href="#" class="header__btn header__btn--active header__btn--basket" title="Корзина">
+          <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <use href="#icon-basket"></use>
+          </svg>
+          <span>12</span>
+        </a>
+        <div class="header__lang">
+          <a href="#" class="header__lang-btn header__lang-btn--active">Рус</a>
+          <a href="#" class="header__lang-btn">En</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <nav class="menu">
+    <div class="wrapper menu__wrap">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="menu__link">Каталог</a>
+          <button type="button" class="menu__down">
+            <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+              <use href="#icon-down"></use>
+            </svg>
+          </button>
+          <div class="menu__drop">
+            <div class="wrapper menu__catalog">
+              <div class="menu__column">
+                <ul class="menu__main">
+                  <li class="menu__main-link"><a href="#">Modern</a></li>
+                  <li class="menu__main-link"><a href="#">Massage</a></li>
+                  <li class="menu__main-link"><a href="#">Black and White</a></li>
+                  <li class="menu__main-link"><a href="#">Bio</a></li>
+                  <li class="menu__main-link"><a href="#">Детские матрасы</a></li>
+                  <li class="menu__main-link"><a href="#">Беспружинные</a></li>
+                </ul>
+              </div>
+              <div class="menu__column">
+                <p class="menu__title">По размеру</p>
+                <ul class="menu__sublist">
+                  <li class="menu__subitem"><a href="#">80x200</a></li>
+                  <li class="menu__subitem"><a href="#">90x200</a></li>
+                  <li class="menu__subitem"><a href="#">120x200</a></li>
+                  <li class="menu__subitem"><a href="#">140x200</a></li>
+                  <li class="menu__subitem"><a href="#">160x200</a></li>
+                  <li class="menu__subitem"><a href="#">180x200</a></li>
+                  <li class="menu__subitem"><a href="#">200x200</a></li>
+                </ul>
+              </div>
+              <div class="menu__column">
+                <p class="menu__title">По жесткости</p>
+                <ul class="menu__sublist">
+                  <li class="menu__subitem"><a href="#">Мягкие</a></li>
+                  <li class="menu__subitem"><a href="#">Средние</a></li>
+                  <li class="menu__subitem"><a href="#">Жесткие</a></li>
+                  <li class="menu__subitem"><a href="#">Разные</a></li>
+                </ul>
+                <p class="menu__title">По свойствам</p>
+                <ul class="menu__sublist">
+                  <li class="menu__subitem"><a href="#">Пружинные</a></li>
+                  <li class="menu__subitem"><a href="#">Беспружинные</a></li>
+                </ul>
+              </div>
+              <div class="menu__column">
+                <p class="menu__title">По типу</p>
+                <ul class="menu__sublist">
+                  <li class="menu__subitem"><a href="#">Двуспальные</a></li>
+                  <li class="menu__subitem"><a href="#">Односпальные</a></li>
+                  <li class="menu__subitem"><a href="#">Десткие</a></li>
+                </ul>
+                <p class="menu__title">По материалу</p>
+                <ul class="menu__sublist">
+                  <li class="menu__subitem"><a href="#">Латексные</a></li>
+                  <li class="menu__subitem"><a href="#">Кокосовые</a></li>
+                  <li class="menu__subitem"><a href="#">Пенополиуретановые</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Оплата и доставка</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Полезная информация</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">О компании</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Контакты</a>
+        </li>
+      </ul>
+      
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="Поиск ...">
+        <button type="submit" class="search__btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </nav>
+  
+  <main>
+    <nav class="breadcrumbs">
+      <div class="wrapper">
+        <a href="#" class="breadcrumbs__link">Главная</a>
+        <a href="#" class="breadcrumbs__link">Каталог</a>
+        <span class="breadcrumbs__link">Матрас Майами</span>
+      </div>
+    </nav>
+    
+    <section class="card">
+      <div class="wrapper">
+        <div class="card__wrap">
+          <div class="card__slider">
+            <div class="swiper-container gallery-top">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide card__slide">
+                  <img src="img/images/img-2-big.jpg" alt="Матрас Майами">
+                </div>
+                <div class="swiper-slide card__slide">
+                  <img src="img/images/img-3.jpg" alt="Матрас Майами">
+                </div>
+                <div class="swiper-slide card__slide">
+                  <img src="img/images/img-4.jpg" alt="Матрас Майами">
+                </div>
+                <div class="swiper-slide card__slide">
+                  <img src="img/images/img-2-big.jpg" alt="Матрас Майами">
+                </div>
+                <div class="swiper-slide card__slide">
+                  <img src="img/images/img-3.jpg" alt="Матрас Майами">
+                </div>
+                <div class="swiper-slide card__slide">
+                  <img src="img/images/img-4.jpg" alt="Матрас Майами">
+                </div>
+              </div>
+              <div class="swiper-pagination card__pagination"></div>
+            </div>
+            <div class="label label--card">
+              <div class="label__block">- 10%</div>
+              <div class="label__block label__block--hardness">Средняя</div>
+              <div class="label__block label__block--kg">120</div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide card__thumb">
+                  <img src="img/images/img-2.jpg" alt="Матрас Майами">
+                </div>
+                <div class="swiper-slide card__thumb">
+                  <img src="img/images/img-3.jpg" alt="Матрас Майами">
+                </div>
+                <div class="swiper-slide card__thumb">
+                  <img src="img/images/img-4.jpg" alt="Матрас Майами">
+                </div>
+                <div class="swiper-slide card__thumb">
+                  <img src="img/images/img-2.jpg" alt="Матрас Майами">
+                </div>
+                <div class="swiper-slide card__thumb">
+                  <img src="img/images/img-3.jpg" alt="Матрас Майами">
+                </div>
+                <div class="swiper-slide card__thumb">
+                  <img src="img/images/img-4.jpg" alt="Матрас Майами">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card__info">
+            <h1 class="title">Матрас Майами</h1>
+            <div class="rating">
+              <img src="img/icons/star.png" alt="Rating">
+              <img src="img/icons/star.png" alt="Rating">
+              <img src="img/icons/star.png" alt="Rating">
+              <img src="img/icons/star.png" alt="Rating">
+              <img src="img/icons/star.png" alt="Rating">
+            </div>
+            <form action="#" class="catalog__form">
+              <div class="catalog__price">
+                <p class="catalog__newprice">7 200 &#8381;</p>
+                <p class="catalog__oldprice">7 900 &#8381;</p>
+              </div>
+              <div class="catalog__line">
+                <a href="#" class="btn btn--red catalog__btn">В корзину</a>
+                <a href="#" class="btn catalog__btn">Купить в 1 клик</a>
+              </div>
+              <div class="catalog__line" title="Сравнить">
+                <div class="card__links">
+                  <a href="#" class="catalog__link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-compare"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="catalog__link" title="Отложить">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-like"></use>
+                    </svg>
+                  </a>
+                </div>
+                <a href="#payment" class="card__link">Удобные способы оплаты</a>
+              </div>
+              <p class="title-4">Характеристики</p>
+              <div class="card__line">
+                <div class="catalog__select">
+                  <label for="select1">Ширина</label>
+                  <select id="select1">
+                    <option value="1" selected>80</option>
+                    <option value="2">90</option>
+                    <option value="3">120</option>
+                  </select>
+                </div>
+                <div class="catalog__select">
+                  <label for="select2">Длина</label>
+                  <select id="select2">
+                    <option value="1" selected>190</option>
+                    <option value="2">200</option>
+                    <option value="3">220</option>
+                  </select>
+                </div>
+              </div>
+              <ul>
+                <li>Высота 19 см</li>
+                <li>Пружины Независимые 500</li>
+                <li>Средняя жесткость</li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="about">
+      <div class="wrapper">
+        <ul class="about__list">
+          <li class="about__item about__item--active"><a href="#about">Описание</a></li>
+          <li class="about__item"><a href="#content">Состав</a></li>
+          <li class="about__item"><a href="#table">Таблица</a></li>
+          <li class="about__item"><a href="#scheme">Чертеж</a></li>
+        </ul>
+        <div class="about__wrap">
+          <div class="about__info">
+            <div class="about__option" id="about">
+              <p class="title-3">Описание</p>
+              <p>Чехол из трикотажа объемного , стеганный на синтепоне 300 гр. Чехол из трикотажа  – обеспечивает оптимальную циркуляцию воздуха. Гигиенический, ткань быстро отводит влагу и приятна для кожи.</p>
+              <div class="about__text">
+                <figure class="about__img">
+                  <img src="img/images/img-5.jpg" alt="Описание">
+                </figure>
+                <div class="about__img-text">
+                  <p><b>TFK (Pocket Spring)</b> – независимый пружинный блок, где на каждый квадратный метр приходится 250 пружин. Все пружины заключены в индивидуальные чехлы и не имеют жесткого соединения, что позволяет каждой пружине работать автономно, обеспечивая оптимальную поддержку и идеальное повторение контуров тела лежащего человека. Позвоночник остается в анатомически правильном положении в течение всего сна.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="about__option" id="content">
+              <p class="title-3">Состав</p>
+              <ul>
+                <li>Пена - 1см;</li>
+                <li>Натуральная латексированная кокосовая койра - 1 см;</li>
+                <li>Спанбонд;</li>
+                <li>Блок независимых пружин TFK, 250 пружин на кв.м;</li>
+                <li>Спанбонд;</li>
+                <li>Натуральная латексированная кокосовая койра - 1 см;</li>
+                <li>Пена - 1 см;</li>
+                <li>Усиления по периметру ППУ;</li>
+                <li>Чехол: трикотаж объёмный , стёганный на синтепоне.</li>
+              </ul>
+            </div>
+            <div class="about__option" id="table">
+              <p class="title-3">Таблица</p>
+              <table>
+                <tr>
+                  <th>Давление</th>
+                  <th>Диаметр</th>
+                  <th>Температура</th>
+                  <th>Применение</th>
+                </tr>
+                <tr>
+                  <td><b>Давление</b>PN (MPa)</td>
+                  <td><b>Диаметр</b>DN (mm)</td>
+                  <td><b>Температура</b>≤120</td>
+                  <td><b>Применение</b>Вода и некоррозионная среда</td>
+                </tr>
+                <tr>
+                  <td><b>Давление</b>PN (MPa)</td>
+                  <td><b>Диаметр</b>DN (mm)</td>
+                  <td><b>Температура</b>≤120</td>
+                  <td><b>Применение</b>Вода и некоррозионная среда</td>
+                </tr>
+                <tr>
+                  <td><b>Давление</b>PN (MPa)</td>
+                  <td><b>Диаметр</b>DN (mm)</td>
+                  <td><b>Температура</b>≤120</td>
+                  <td><b>Применение</b>Вода и некоррозионная среда</td>
+                </tr>
+                <tr>
+                  <td><b>Давление</b>PN (MPa)</td>
+                  <td><b>Диаметр</b>DN (mm)</td>
+                  <td><b>Температура</b>≤120</td>
+                  <td><b>Применение</b>Вода и некоррозионная среда</td>
+                </tr>
+              </table>
+            </div>
+            <div class="about__option" id="scheme">
+              <p class="title-3">Чертеж</p>
+              В макете этот блок отсутствует
+            </div>
+          </div>
+          
+          <aside class="about__aside">
+            <div class="about__block">
+              <p class="title-3">Доставка</p>
+              <p>Для бесплатной доставки добавьте в корзину товары на сумму 7 000 ₽</p>
+              <div class="about__line">
+                <p>Доставка в Екатеринбурге</p>
+                <span>500 ₽</span>
+              </div>
+              <div class="about__line">
+                <p>Самовывоз</p>
+                <span>Бесплатно</span>
+              </div>
+            </div>
+            
+            <div class="about__block" id="payment">
+              <p class="title-3">Удобные способ оплаты</p>
+              <p>Мы принимаем онлайн-оплату банковскими картами, Яндекс-деньгами, Webmoney, через QIWI и другими электронными методами.</p>
+              <div class="about__imgs">
+                <img src="img/images/payment.png" alt="способ оплаты">
+              </div>
+            </div>
+          </aside>
+        </div>
+        
+        <div class="order order--catalog">
+          <div class="order__block">
+            <div class="order__wrap">
+              <div class="order__left">
+                <div class="order__img">
+                  <figure class="order__icon">
+                    <img src="img/icons/icon-7.png" alt="Фабрика Сна">
+                  </figure>
+                </div>
+              </div>
+              <div class="order_info">
+                <div class="order__line">
+                  <div class="order__text">
+                    <p class="order_subtitle">Запутались с выбором?</p>
+                    <p>Оставьте заявку и наши специалисты помогут найти лучший матрас.</p>
+                  </div>
+                  <a href="#" class="btn order__btn">Оставить заявку</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="related">
+      <div class="wrapper">
+        <div class="title-2">Похожие товары</div>
+        <div class="catalog">
+          <div class="swiper-container catalog__slider catalog__slider--01">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide catalog__slide">
+                <a href="#" class="catalog__img">
+                  <img src="img/images/img-2.jpg" alt="Матрас">
+                </a>
+                <div class="label">
+                  <div class="label__block label__block--new"></div>
+                </div>
+                <div class="rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                </div>
+                <a href="#" class="catalog__title">Матрас Майами</a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__price">
+                    <p class="catalog__newprice">7 200 &#8381;</p>
+                  </div>
+                  <div class="catalog__line">
+                    <div class="catalog__select">
+                      <label for="select1">Ширина</label>
+                      <select id="select1">
+                        <option value="1" selected>80</option>
+                        <option value="2">90</option>
+                        <option value="3">120</option>
+                      </select>
+                    </div>
+                    <div class="catalog__select">
+                      <label for="select2">Длина</label>
+                      <select id="select2">
+                        <option value="1" selected>190</option>
+                        <option value="2">200</option>
+                        <option value="3">220</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="catalog__line">
+                    <span class="catalog__parameter catalog__parameter--hardness">Разная жесткость</span>
+                    <span class="catalog__parameter catalog__parameter--kg">Нагрузка 120 кг</span>
+                  </div>
+                  <div class="catalog__line">
+                    <a href="#" class="btn btn--red catalog__btn">Купить</a>
+                    <a href="#" class="btn catalog__btn">В 1 клик</a>
+                  </div>
+                  <div class="catalog__line">
+                    <a href="#" class="catalog__link">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-like"></use>
+                      </svg>
+                      <span>Отложить</span>
+                    </a>
+                    <a href="#" class="catalog__link">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-compare"></use>
+                      </svg>
+                      <span>Сравнить</span>
+                    </a>
+                  </div>
+                </form>
+              </div>
+              <div class="swiper-slide catalog__slide">
+                <a href="#" class="catalog__img">
+                  <img src="img/images/img-3.jpg" alt="Матрас">
+                </a>
+                <div class="label">
+                  <div class="label__block label__block--hit"></div>
+                </div>
+                <div class="rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                </div>
+                <a href="#" class="catalog__title">Меркурий Black and White</a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__price">
+                    <p class="catalog__newprice">7 300 &#8381;</p>
+                  </div>
+                  <div class="catalog__line">
+                    <div class="catalog__select">
+                      <label for="select1">Ширина</label>
+                      <select id="select1">
+                        <option value="1" selected>80</option>
+                        <option value="2">90</option>
+                        <option value="3">120</option>
+                      </select>
+                    </div>
+                    <div class="catalog__select">
+                      <label for="select2">Длина</label>
+                      <select id="select2">
+                        <option value="1" selected>190</option>
+                        <option value="2">200</option>
+                        <option value="3">220</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="catalog__line">
+                    <span class="catalog__parameter catalog__parameter--hardness">Средняя жесткость</span>
+                    <span class="catalog__parameter catalog__parameter--kg">Нагрузка 120 кг</span>
+                  </div>
+                  <div class="catalog__line">
+                    <a href="#" class="btn btn--red catalog__btn">Купить</a>
+                    <a href="#" class="btn catalog__btn">В 1 клик</a>
+                  </div>
+                  <div class="catalog__line">
+                    <a href="#" class="catalog__link">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-like"></use>
+                      </svg>
+                      <span>Отложить</span>
+                    </a>
+                    <a href="#" class="catalog__link">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-compare"></use>
+                      </svg>
+                      <span>Сравнить</span>
+                    </a>
+                  </div>
+                </form>
+              </div>
+              <div class="swiper-slide catalog__slide">
+                <a href="#" class="catalog__img">
+                  <img src="img/images/img-4.jpg" alt="Матрас">
+                </a>
+                <div class="label">
+                  <div class="label__block">- 10%</div>
+                </div>
+                <div class="rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                </div>
+                <a href="#" class="catalog__title">Medium Сocos</a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__price">
+                    <p class="catalog__newprice">4 028 &#8381;</p>
+                    <p class="catalog__oldprice">4 240 &#8381;</p>
+                  </div>
+                  <div class="catalog__line">
+                    <div class="catalog__select">
+                      <label for="select1">Ширина</label>
+                      <select id="select1">
+                        <option value="1" selected>80</option>
+                        <option value="2">90</option>
+                        <option value="3">120</option>
+                      </select>
+                    </div>
+                    <div class="catalog__select">
+                      <label for="select2">Длина</label>
+                      <select id="select2">
+                        <option value="1" selected>190</option>
+                        <option value="2">200</option>
+                        <option value="3">220</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="catalog__line">
+                    <span class="catalog__parameter catalog__parameter--hardness">Высокая жесткость</span>
+                    <span class="catalog__parameter catalog__parameter--kg">Нагрузка 120 кг</span>
+                  </div>
+                  <div class="catalog__line">
+                    <a href="#" class="btn btn--red catalog__btn">Купить</a>
+                    <a href="#" class="btn catalog__btn">В 1 клик</a>
+                  </div>
+                  <div class="catalog__line">
+                    <a href="#" class="catalog__link">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-like"></use>
+                      </svg>
+                      <span>Отложить</span>
+                    </a>
+                    <a href="#" class="catalog__link">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-compare"></use>
+                      </svg>
+                      <span>Сравнить</span>
+                    </a>
+                  </div>
+                </form>
+              </div>
+              <div class="swiper-slide catalog__slide">
+                <a href="#" class="catalog__img">
+                  <img src="img/images/img-2.jpg" alt="Матрас">
+                </a>
+                <div class="label">
+                  <div class="label__block label__block--new"></div>
+                </div>
+                <div class="rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                </div>
+                <a href="#" class="catalog__title">Матрас Майами</a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__price">
+                    <p class="catalog__newprice">7 200 &#8381;</p>
+                  </div>
+                  <div class="catalog__line">
+                    <div class="catalog__select">
+                      <label for="select1">Ширина</label>
+                      <select id="select1">
+                        <option value="1" selected>80</option>
+                        <option value="2">90</option>
+                        <option value="3">120</option>
+                      </select>
+                    </div>
+                    <div class="catalog__select">
+                      <label for="select2">Длина</label>
+                      <select id="select2">
+                        <option value="1" selected>190</option>
+                        <option value="2">200</option>
+                        <option value="3">220</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="catalog__line">
+                    <span class="catalog__parameter catalog__parameter--hardness">Разная жесткость</span>
+                    <span class="catalog__parameter catalog__parameter--kg">Нагрузка 120 кг</span>
+                  </div>
+                  <div class="catalog__line">
+                    <a href="#" class="btn btn--red catalog__btn">Купить</a>
+                    <a href="#" class="btn catalog__btn">В 1 клик</a>
+                  </div>
+                  <div class="catalog__line">
+                    <a href="#" class="catalog__link">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-like"></use>
+                      </svg>
+                      <span>Отложить</span>
+                    </a>
+                    <a href="#" class="catalog__link">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-compare"></use>
+                      </svg>
+                      <span>Сравнить</span>
+                    </a>
+                  </div>
+                </form>
+              </div>
+              <div class="swiper-slide catalog__slide">
+                <a href="#" class="catalog__img">
+                  <img src="img/images/img-3.jpg" alt="Матрас">
+                </a>
+                <div class="label">
+                  <div class="label__block label__block--hit"></div>
+                </div>
+                <div class="rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                </div>
+                <a href="#" class="catalog__title">Меркурий Black and White</a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__price">
+                    <p class="catalog__newprice">7 300 &#8381;</p>
+                  </div>
+                  <div class="catalog__line">
+                    <div class="catalog__select">
+                      <label for="select1">Ширина</label>
+                      <select id="select1">
+                        <option value="1" selected>80</option>
+                        <option value="2">90</option>
+                        <option value="3">120</option>
+                      </select>
+                    </div>
+                    <div class="catalog__select">
+                      <label for="select2">Длина</label>
+                      <select id="select2">
+                        <option value="1" selected>190</option>
+                        <option value="2">200</option>
+                        <option value="3">220</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="catalog__line">
+                    <span class="catalog__parameter catalog__parameter--hardness">Средняя жесткость</span>
+                    <span class="catalog__parameter catalog__parameter--kg">Нагрузка 120 кг</span>
+                  </div>
+                  <div class="catalog__line">
+                    <a href="#" class="btn btn--red catalog__btn">Купить</a>
+                    <a href="#" class="btn catalog__btn">В 1 клик</a>
+                  </div>
+                  <div class="catalog__line">
+                    <a href="#" class="catalog__link">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-like"></use>
+                      </svg>
+                      <span>Отложить</span>
+                    </a>
+                    <a href="#" class="catalog__link">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-compare"></use>
+                      </svg>
+                      <span>Сравнить</span>
+                    </a>
+                  </div>
+                </form>
+              </div>
+              <div class="swiper-slide catalog__slide">
+                <a href="#" class="catalog__img">
+                  <img src="img/images/img-4.jpg" alt="Матрас">
+                </a>
+                <div class="label">
+                  <div class="label__block">- 10%</div>
+                </div>
+                <div class="rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                  <img src="img/icons/star.png" alt="Rating">
+                </div>
+                <a href="#" class="catalog__title">Medium Сocos</a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__price">
+                    <p class="catalog__newprice">4 028 &#8381;</p>
+                    <p class="catalog__oldprice">4 240 &#8381;</p>
+                  </div>
+                  <div class="catalog__line">
+                    <div class="catalog__select">
+                      <label for="select1">Ширина</label>
+                      <select id="select1">
+                        <option value="1" selected>80</option>
+                        <option value="2">90</option>
+                        <option value="3">120</option>
+                      </select>
+                    </div>
+                    <div class="catalog__select">
+                      <label for="select2">Длина</label>
+                      <select id="select2">
+                        <option value="1" selected>190</option>
+                        <option value="2">200</option>
+                        <option value="3">220</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="catalog__line">
+                    <span class="catalog__parameter catalog__parameter--hardness">Высокая жесткость</span>
+                    <span class="catalog__parameter catalog__parameter--kg">Нагрузка 120 кг</span>
+                  </div>
+                  <div class="catalog__line">
+                    <a href="#" class="btn btn--red catalog__btn">Купить</a>
+                    <a href="#" class="btn catalog__btn">В 1 клик</a>
+                  </div>
+                  <div class="catalog__line">
+                    <a href="#" class="catalog__link">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-like"></use>
+                      </svg>
+                      <span>Отложить</span>
+                    </a>
+                    <a href="#" class="catalog__link">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-compare"></use>
+                      </svg>
+                      <span>Сравнить</span>
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination catalog__pagination catalog__pagination--01"></div>
+          <div class="swiper-button-prev catalog__prev catalog__prev--01"></div>
+          <div class="swiper-button-next catalog__next catalog__next--01"></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="seria seria--bg">
+      <div class="wrapper">
+        <p class="title-2">Серии матрасов</p>
+        <ul class="seria__list">
+          <li class="seria__item">
+            <a href="#" class="seria__link">
+              <figure class="seria__icon">
+                <img src="img/icons/icon-1.png" alt="Серии матрасов">
+              </figure>
+              <div class="seria__text">
+                <p class="title-3">Modern</p>
+                <p class="seria__info">Сочетания разнообразных параметров</p>
+              </div>
+            </a>
+          </li>
+          <li class="seria__item">
+            <a href="#" class="seria__link">
+              <figure class="seria__icon">
+                <img src="img/icons/icon-2.png" alt="Серии матрасов">
+              </figure>
+              <div class="seria__text">
+                <p class="title-3">Massage</p>
+                <p class="seria__info">Для для тех кто много устает, хорошее решение для спины</p>
+              </div>
+            </a>
+          </li>
+          <li class="seria__item">
+            <a href="#" class="seria__link">
+              <figure class="seria__icon">
+                <img src="img/icons/icon-3.png" alt="Серии матрасов">
+              </figure>
+              <div class="seria__text">
+                <p class="title-3">Black and White</p>
+                <p class="seria__info">Сочетание классических и современных материалов</p>
+              </div>
+            </a>
+          </li>
+          <li class="seria__item">
+            <a href="#" class="seria__link">
+              <figure class="seria__icon">
+                <img src="img/icons/icon-4.png" alt="Серии матрасов">
+              </figure>
+              <div class="seria__text">
+                <p class="title-3">Bio</p>
+                <p class="seria__info">Только из натуральных материалов.</p>
+              </div>
+            </a>
+          </li>
+          <li class="seria__item">
+            <a href="#" class="seria__link">
+              <figure class="seria__icon">
+                <img src="img/icons/icon-5.png" alt="Серии матрасов">
+              </figure>
+              <div class="seria__text">
+                <p class="title-3">Детские матрасы</p>
+                <p class="seria__info">Сочетание классических и современных материалов</p>
+              </div>
+            </a>
+          </li>
+          <li class="seria__item">
+            <a href="#" class="seria__link">
+              <figure class="seria__icon">
+                <img src="img/icons/icon-6.png" alt="Серии матрасов">
+              </figure>
+              <div class="seria__text">
+                <p class="title-3">Беспружинные</p>
+                <p class="seria__info">Сочетание классических и современных материалов</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="info">
+      <div class="wrapper">
+        <p class="title-2">Полезная информация</p>
+        <div class="swiper-container info__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide info__item">
+              <a href="#" class="info__link">
+                <p class="title-3">Гарантия<br>на матрасы</p>
+                <figure class="info__img">
+                  <img src="img/icons/info-1.png" alt="Гарантия на матрасы">
+                </figure>
+                <p class="info__text">Все матрасы имеют гарантийный талон и паспорт товара с описанием правил эксплуатации и гарантии.</p>
+                <span class="btn btn--red info__btn">Узнать больше</span>
+              </a>
+            </div>
+            <div class="swiper-slide info__item">
+              <a href="#" class="info__link">
+                <p class="title-3">Правила эксплуатации</p>
+                <figure class="info__img">
+                  <img src="img/icons/info-2.png" alt="Правила эксплуатации">
+                </figure>
+                <p class="info__text">Срок службы матраса во многом зависит от материалов из которых он был изготовлен.</p>
+                <span class="btn btn--red info__btn">Узнать больше</span>
+              </a>
+            </div>
+            <div class="swiper-slide info__item">
+              <a href="#" class="info__link">
+                <p class="title-3">Материалы</p>
+                <figure class="info__img">
+                  <img src="img/icons/info-3.png" alt="Материалы">
+                </figure>
+                <p class="info__text">Срок службы матраса во многом зависит от материалов из которых он был изготовлен.</p>
+                <span class="btn btn--red info__btn">Узнать больше</span>
+              </a>
+            </div>
+            <div class="swiper-slide info__item">
+              <a href="#" class="info__link">
+                <p class="title-3">Партнерам</p>
+                <figure class="info__img">
+                  <img src="img/icons/info-4.png" alt="Партнерам">
+                </figure>
+                <p class="info__text">Компания производитель анатомических матрасов «Фабрика Сна», предлагает сотрудничество!</p>
+                <span class="btn btn--red info__btn">Узнать больше</span>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination info__pagination"></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="order">
+      <div class="wrapper">
+        <div class="order__block">
+          <div class="order__wrap">
+            <div class="order__left">
+              <div class="order__img">
+                <figure class="order__icon">
+                  <img src="img/icons/icon-8.png" alt="Фабрика Сна">
+                </figure>
+              </div>
+            </div>
+            <div class="order_info">
+              <div class="order__line">
+                <div class="order__text">
+                  <p class="order_subtitle">Ничего не выбрали?</p>
+                  <p>Оставьте заявку и наши специалисты помогут Вам с выбором.</p>
+                </div>
+                <a href="#" class="btn order__btn">Оставить заявку</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__top">
+        <div class="footer__block">
+          <p class="footer__title"><span>Каталог товаров</span></p>
+          <ul class="footer__list">
+            <li class="footer__item"><a href="#">Серия Modern</a></li>
+            <li class="footer__item"><a href="#">Серия Massage</a></li>
+            <li class="footer__item"><a href="#">Серия Black and White</a></li>
+            <li class="footer__item"><a href="#">Серия Bio</a></li>
+            <li class="footer__item"><a href="#">Детские матрасы</a></li>
+            <li class="footer__item"><a href="#">Беспружинные матрасы</a></li>
+          </ul>
+        </div>
+        <div class="footer__block">
+          <p class="footer__title"><span>Информация</span></p>
+          <ul class="footer__list">
+            <li class="footer__item"><a href="#">Оплата и доставка</a></li>
+            <li class="footer__item"><a href="#">Полезная информация</a></li>
+            <li class="footer__item"><a href="#">Вопрос-Ответ</a></li>
+            <li class="footer__item"><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__block">
+          <p class="footer__title"><span>Контакты</span></p>
+          <div class="footer__drop">
+            <address>«Фабрика Сна»<br>г. Екатеринбург,<br>ул. Альпинистов 77В</address>
+            <a href="tel:+73433020900" class="footer__phone">8 (343) 30-20-900</a>
+            <a href="mailto:nk@f-sleep.ru" class="footer_mail">nk@f-sleep.ru</a>
+          </div>
+        </div>
+        <div class="footer__block footer__block--social">
+          <p class="footer__block-title">Подписка на рассылку</p>
+          <form action="#" class="subscribe">
+            <input type="text" class="subscribe__input" placeholder="Введите ваш email">
+            <button type="submit" class="subscribe__btn">
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.00002 13L17.17 13L14.29 15.88C13.9 16.27 13.9 16.9 14.29 17.29C14.68 17.68 15.31 17.68 15.7 17.29L20.29 12.7C20.68 12.31 20.68 11.68 20.29 11.29L15.7 6.70002C15.31 6.31002 14.68 6.31002 14.29 6.70002C13.9 7.09002 13.9 7.72002 14.29 8.11002L17.17 11L4.00002 11C3.45002 11 3.00002 11.45 3.00002 12C3.00002 12.55 3.45002 13 4.00002 13Z"/>
+              </svg>
+            </button>
+          </form>
+          <p>Следите за нами в соцсетях</p>
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.125 2.78503C12.4141 2.60404 11.6857 2.50841 10.9539 2.5C8.6352 2.5 7.70475 3.64014 7.70475 5.6739V7.1607H6.25V9.56424H7.70475V16.875H10.5404V9.56424H12.6081L12.8075 7.1607H10.5404V5.99745C10.5404 5.35035 10.5995 4.94206 11.5078 4.94206C11.9315 4.95365 12.3538 5.00002 12.7705 5.08072L13.125 2.78503Z"/>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2584 7.49537C11.2524 7.88305 11.2451 8.26367 11.2404 8.65134C11.2306 8.90408 11.2484 9.15717 11.2937 9.40554C11.3174 9.54041 11.3734 9.66661 11.4563 9.77207C11.4877 9.83055 11.5414 9.87184 11.6037 9.88534C11.666 9.89884 11.7307 9.88325 11.7814 9.84256C11.8884 9.76894 11.9862 9.68132 12.0725 9.58176C12.3361 9.25748 12.5678 8.90557 12.764 8.53152C13.2253 7.69874 13.6092 6.82061 13.9104 5.90944C13.9328 5.84127 13.9607 5.77524 13.9937 5.71208C14.063 5.5634 14.2089 5.47214 14.3654 5.47947C14.6106 5.47947 14.8557 5.47947 15.0982 5.47243C15.6078 5.47243 16.1174 5.46538 16.6304 5.46538C16.8029 5.45829 16.9758 5.46536 17.1473 5.48652C17.2686 5.4944 17.3789 5.56392 17.4432 5.67309C17.5075 5.78226 17.5178 5.91759 17.4711 6.03631C17.4277 6.2692 17.354 6.49457 17.2519 6.70593C17.0031 7.24253 16.7166 7.75853 16.3945 8.24957C16.0535 8.78527 15.7031 9.30686 15.3633 9.84256C15.2636 10.005 15.1745 10.1746 15.0969 10.3501C14.9883 10.5798 15.0099 10.8544 15.1528 11.062C15.3069 11.2919 15.4804 11.5065 15.6711 11.7034C16.1215 12.1726 16.5406 12.6743 16.9255 13.2047C17.0991 13.4475 17.2505 13.7071 17.3778 13.9801C17.4179 14.0704 17.4492 14.1649 17.4711 14.262C17.5237 14.4546 17.4549 14.6613 17.2999 14.7766C17.1465 14.8971 16.9613 14.9637 16.7703 14.9669C16.1361 14.9739 15.5045 14.981 14.8677 14.9951C14.6617 15.0119 14.4545 14.9855 14.2582 14.9175C13.9435 14.7791 13.6657 14.5613 13.4488 14.2832C13.2189 14.0012 13.0038 13.7052 12.7753 13.4232C12.6167 13.2259 12.4495 13.0426 12.281 12.8523C12.2256 12.7973 12.1621 12.7521 12.0931 12.7184C11.9322 12.6169 11.725 12.6594 11.6115 12.8171C11.5108 12.9417 11.4377 13.0886 11.3977 13.247C11.3199 13.5219 11.2751 13.8061 11.2644 14.0929C11.2571 14.2197 11.2558 14.3537 11.2398 14.4876C11.227 14.6754 11.1087 14.8366 10.94 14.8964C10.8436 14.9347 10.7419 14.9562 10.6389 14.9598C10.3491 14.9669 10.0593 14.9669 9.76889 14.9669C9.20198 14.9519 8.64355 14.8178 8.12614 14.5722C7.2795 14.1777 6.53841 13.5674 5.9691 12.7959C5.45486 12.116 4.99475 11.3923 4.59348 10.632C3.82099 9.18392 3.14346 7.68137 2.56568 6.13499C2.53516 6.04885 2.51567 5.95877 2.50773 5.86715C2.47544 5.73015 2.54702 5.58966 2.67293 5.54291C2.78845 5.49969 2.90905 5.4736 3.03133 5.46538C3.63087 5.45833 4.23042 5.45833 4.82997 5.45128H5.01116C5.32461 5.43776 5.60591 5.65348 5.69131 5.97288C6.06906 7.08307 6.56381 8.14471 7.1662 9.1377C7.29469 9.33821 7.43626 9.52899 7.58988 9.70863C7.65725 9.7842 7.73867 9.8442 7.82903 9.88485C7.89676 9.91833 7.97456 9.92066 8.04397 9.89128C8.11338 9.86191 8.1682 9.80345 8.19542 9.72978C8.26853 9.57744 8.31631 9.41292 8.33664 9.24342C8.3966 8.84259 8.42091 8.4367 8.40926 8.03107C8.40126 7.6152 8.38128 7.19933 8.35863 6.78346C8.34734 6.66915 8.32729 6.55601 8.29867 6.44513C8.24464 6.12841 8.02541 5.87158 7.7331 5.78256C7.66955 5.76263 7.60507 5.74616 7.53991 5.73322C7.4693 5.71208 7.45331 5.68388 7.48795 5.60635C7.56036 5.45837 7.67193 5.3359 7.80904 5.25392C7.96603 5.15791 8.14034 5.09788 8.32066 5.0777C8.85747 5.00377 9.39959 4.98253 9.9401 5.01427C10.213 5.01657 10.4846 5.05445 10.7488 5.12704C11.0547 5.19733 11.271 5.48666 11.2651 5.81781C11.2902 6.1626 11.2925 6.50883 11.2718 6.85395C11.2664 7.06541 11.2578 7.28391 11.2504 7.49537H11.2584Z"/>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.7271 18.3333C6.65442 18.3333 6.58006 18.3333 6.50738 18.3333C6.46174 18.3224 6.41611 18.307 6.37047 18.2993C5.63694 18.1773 5.16369 17.4765 5.37158 16.819C5.44595 16.5843 5.593 16.396 5.77892 16.2262C6.5547 15.5177 7.33049 14.8076 8.10628 14.0975C8.13332 14.0728 8.15867 14.0466 8.19417 14.0126C8.1536 13.9988 8.12656 13.9864 8.09783 13.9802C7.23246 13.7934 6.42625 13.4801 5.66567 13.0602C5.11806 12.7577 4.88144 12.2251 5.05721 11.6648C5.20426 11.1971 5.71976 10.8405 6.25216 10.8343C6.53104 10.8312 6.78288 10.8992 7.01781 11.0319C7.86627 11.512 8.79418 11.762 9.788 11.8037C10.1565 11.8192 10.5249 11.7945 10.8883 11.742C11.6337 11.6324 12.3334 11.4024 12.9723 11.0334C13.4996 10.7294 14.1148 10.7849 14.534 11.1106C15.2117 11.6385 15.1391 12.5848 14.3886 13.0216C13.6247 13.4662 12.7982 13.7796 11.9176 13.9756C11.8821 13.9833 11.8466 13.9957 11.7976 14.0111C11.8331 14.0451 11.8568 14.0698 11.8821 14.0929C12.6714 14.8138 13.459 15.5347 14.2484 16.254C14.5391 16.5179 14.6946 16.8298 14.6641 17.2079C14.6269 17.6803 14.3684 18.0184 13.9019 18.2159C13.7717 18.2715 13.6247 18.2931 13.4844 18.3317C13.4117 18.3317 13.3373 18.3317 13.2647 18.3317C13.2495 18.3271 13.2343 18.3178 13.2173 18.3163C12.8911 18.2777 12.6258 18.1372 12.3959 17.9242C11.6252 17.2157 10.8511 16.5118 10.0787 15.8063C10.0534 15.7832 10.0263 15.7616 9.99589 15.7353C9.96884 15.7585 9.94687 15.777 9.9249 15.7971C9.1339 16.5195 8.3429 17.2419 7.55359 17.9643C7.35922 18.1418 7.12767 18.2576 6.85724 18.3039C6.8133 18.3132 6.76935 18.324 6.7271 18.3333Z"/>
+                  <path d="M14.1668 5.84049C14.1794 8.10733 12.3078 10.0375 9.92982 9.99953C7.67371 9.96634 5.81154 8.11049 5.83369 5.79464C5.85268 3.54519 7.68162 1.63244 10.0675 1.66721C12.3758 1.70199 14.1794 3.58471 14.1668 5.84049ZM10.001 4.10004C9.07547 4.07791 8.26226 4.87463 8.26068 5.82942C8.25909 6.77947 9.04699 7.57303 9.99944 7.57461C10.955 7.57619 11.7429 6.77473 11.7429 5.83574C11.7445 4.89676 10.9471 4.07791 10.001 4.10004Z"/>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5048 10.0061C12.5046 11.3872 11.3804 12.5057 9.99318 12.5048C8.60609 12.504 7.49399 11.3796 7.49494 9.97908C7.49585 8.60431 8.62435 7.49434 10.0201 7.49522C11.3896 7.49614 12.505 8.62326 12.5048 10.0061ZM15.8183 5.00557C15.8182 4.55492 15.4516 4.18508 15.0018 4.18195C14.545 4.17878 14.1715 4.54899 14.1713 5.00518C14.1712 5.46099 14.5451 5.83219 15.0014 5.82919C15.4506 5.82622 15.8183 5.45546 15.8183 5.00557ZM10.0008 14.1538C12.287 14.1536 14.1529 12.2912 14.1536 10.0088C14.1544 7.71109 12.2968 5.8473 10.0053 5.84661C7.7088 5.84594 5.84617 7.70462 5.8457 9.99749C5.8452 12.291 7.7076 14.1539 10.0008 14.1538ZM9.99227 17.4993C8.89164 17.4993 7.791 17.4993 6.69036 17.4993C4.58677 17.4991 2.82992 15.9774 2.53703 13.8982C2.51325 13.7295 2.50193 13.5575 2.50176 13.3871C2.49949 11.1304 2.49991 8.87379 2.50035 6.61716C2.50071 4.68231 3.94377 2.93792 5.84549 2.58545C6.12548 2.53356 6.41393 2.50515 6.69858 2.50432C8.91833 2.49782 11.1381 2.50049 13.3579 2.50082C15.3834 2.50113 17.1378 4.00622 17.4449 6.01208C17.4783 6.23039 17.497 6.45323 17.4974 6.67402C17.5011 8.90754 17.5 11.141 17.4996 13.3745C17.4991 15.3765 15.9807 17.1432 13.9977 17.4433C13.7702 17.4777 13.5381 17.4957 13.3081 17.4968C12.2028 17.5023 11.0975 17.4993 9.99227 17.4993Z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>Copyright © 2012 - 2020 гг.<br>Интернет-магазин матрасов «Фабрика Сна»</p>
+        <a href="#" class="footer__policy">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Modal windows -->
+  <div style="display: none;" id="city" class="modal">
+    <p class="modal__city">Выберите ваш город</p>
+    <ul class="modal__list">
+      <li class="modal__item modal__item--active"><a href="#">Екатеринбург</a></li>
+      <li class="modal__item"><a href="#">Волгоград</a></li>
+      <li class="modal__item"><a href="#">Москва</a></li>
+      <li class="modal__item"><a href="#">Тюмень</a></li>
+      <li class="modal__item"><a href="#">Новосибирск</a></li>
+      <li class="modal__item"><a href="#">Челябинск</a></li>
+      <li class="modal__item"><a href="#">Самара</a></li>
+    </ul>
+  </div>
+  
+  <div style="display: none;" id="call" class="modal modal--call">
+    <p class="modal__title">Обратная связь</p>
+    <form action="#" class="form">
+      <div class="form__reqiured">
+        <input type="text" class="form__input" placeholder="Ваше имя">
+      </div>
+      <div class="form__reqiured">
+        <input type="text" class="form__input" placeholder="Ваш email или телефон">
+      </div>
+      <div class="form__select">
+        <select>
+          <option value="" disabled selected>Выберите что-то</option>
+          <option value="1">option 1</option>
+          <option value="2">option 2</option>
+        </select>
+      </div>
+      <textarea class="form__message" placeholder="Ваше сообщение"></textarea>
+      <input type="checkbox" id="check" class="checkbox" required>
+      <label for="check" class="checkbox-label">Отправляя форму, я даю согласие на обработку персональных данных.</label>
+      <button type="submit" class="btn form__btn">Оставить</button>
+    </form>
+  </div>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
+  <script src="js/info-slider.js"></script>
+  <script src="js/scroll-block.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+
+  <!-- Footer -->
+  <script>
+    if (window.innerWidth < 766) {
+      $('.footer__title').click(function() {
+        $(this).next().slideToggle();
+        $(this).toggleClass('footer__title--opened');
+      })
+    }
+  </script>
+  
+  <!-- Sliders -->
+  <script>
+    var mySwiper = new Swiper ('.catalog__slider--01', {
+      pagination: {
+        el: '.catalog__pagination--01',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.catalog__next--01',
+        prevEl: '.catalog__prev--01',
+      },
+      simulateTouch: false,
+      preventClicks: false,
+      preventClicksPropagation: false,
+      slidesPerView: 4,
+      spaceBetween: 30,
+      breakpoints: {
+        1200: {
+          slidesPerView: 3,
+        },
+        1022: {
+          slidesPerView: 2,
+        },
+        600: {
+          slidesPerView: 1,
+        }
+      }
+    });
+    
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 24,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+        766: {
+          centeredSlides: false,
+        }
+      }
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      pagination: {
+        el: '.card__pagination',
+        clickable: true,
+      },
+      thumbs: {
+        swiper: galleryThumbs
+      }
+    });
+  </script>
+</body>
+</html>

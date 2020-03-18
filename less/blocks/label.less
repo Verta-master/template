@@ -1,0 +1,61 @@
+.label {
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  z-index: 10;
+  
+  &--card {
+    top: 24px;
+    left: 24px;
+    
+    .label__block {
+      width: 72px;
+      height: 72px;
+      
+      &--hardness {
+        padding-top: 10px;
+        font-weight: 800;
+        font-size: 9px;
+        text-transform: uppercase;
+      }
+      
+      &--kg {
+        padding-top: 18px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.label__block {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  background-image: url(../img/icons/label-sale.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  
+  &--new {
+    background-image: url(../img/icons/label-new.svg);
+  }
+  
+  &--hit {
+    background-image: url(../img/icons/label-hit.svg);
+  }
+  
+  &--hardness {
+    background-image: url(../img/icons/label-hardness.svg);
+  }
+  
+  &--kg {
+    background-image: url(../img/icons/label-kg.svg);
+  }
+}

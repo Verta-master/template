@@ -1,0 +1,218 @@
+.filter {
+  padding: 40px 0;
+  background-color: #F3F8FB;
+  
+  .title-2 {
+    margin-top: 0;
+  }
+  
+  &--catalog {
+    padding: 30px 0;
+  }
+}
+
+.filter__form {
+  background: #FFFFFF;
+  box-shadow: 0px 6px 56px rgba(0, 30, 97, 0.08);
+  border-radius: 8px;
+}
+
+.filter__block {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 38px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #EBEDEF;
+}
+
+.filter__field {
+  position: relative;
+  width: 25%;
+  margin-bottom: 10px;
+}
+
+.filter__clear {
+  width: 173px;
+  height: 40px;
+  max-width: 100%;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #99A3AE;
+  line-height: 1;
+  font-size: 14px;
+  border: 1px solid #EBEDEF;
+  border-radius: 20px;
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: @blue;
+    border-color: @blue;
+    .transition();
+  }
+}
+
+.filter__option {
+  margin-bottom: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  
+  span {
+    margin-right: 5px;
+  }
+}
+
+.filter__drop {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  min-width: 182px;
+  z-index: 10;
+  padding: 20px;
+  border-radius: 4px;
+  background: #FFFFFF;
+  box-shadow: 0px 6px 56px rgba(0, 30, 97, 0.08);
+}
+
+.filter__selected {
+  color: #99A3AE;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox-label {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 2px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #E0E4E7;
+    border-radius: 3px;
+  }
+}
+
+.checkbox:checked + .checkbox-label::before {
+  background-color: @blue;
+  border-color: @blue;
+  background-image: url(../img/icons/tick.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 10px;
+}
+
+.filter__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.filter__input {
+  display: block;
+  width: 105px;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid #E0E4E7;
+  border-radius: 4px;
+}
+
+.filter__parameter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 182px;
+  max-width: 100%;
+  height: 32px;
+  padding-left: 12px;
+  padding-right: 24px;
+  color: #FFFFFF;
+  background: #477BFF;
+  border-radius: 16px;
+  background-image: url(../img/icons/cross-white.svg);
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  background-position: right 12px center;
+}
+
+.filter__range {
+  width: 230px;
+  max-width: 100%;
+  
+  .ui-slider {
+    position: relative;
+  }
+  /* Ползунок */
+  .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 6px solid @blue;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    outline: none;
+  }
+  .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    overflow: hidden;
+  }
+  /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+  .ui-slider-horizontal {
+    height: 5px;
+  }
+  /* позиционируем ползунки */
+  .ui-slider-horizontal .ui-slider-handle { 
+    top: -6px;
+    margin-left: -8px;
+  }
+  .ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+  }
+  .ui-slider-horizontal .ui-slider-range-min { 
+    left: 0;
+  }
+  .ui-slider-horizontal .ui-slider-range-max {
+    right: 0;
+  }
+  /* оформление полосы по которой ходит ползунок */
+  .ui-widget-content { 
+    border: 1px solid #EBEDEF;
+    background-color: #EBEDEF;
+  }
+  /* оформление активного участка (между двумя ползунками) */
+  .ui-widget-header { 
+    border: 1px solid @blue;
+    background-color: @blue;
+  }
+  /* скругление для полосы слайдера */
+  .ui-corner-all {
+    border-radius: 4px;
+  }
+  .ui-widget.ui-widget-content {
+      border: 0;
+    }
+}
+
+.filter__open {
+  display: none;
+}
