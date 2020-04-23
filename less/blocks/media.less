@@ -17,10 +17,6 @@
   .benefits__item {
     width: auto;
     margin-bottom: 20px;
-    padding-left: 20px;
-  }
-  .benefits__text {
-    width: ~"calc(100% - 100px)";
   }
   .order__block--filter .order__btn,
   .order__input {
@@ -38,6 +34,9 @@
       margin-left: 4px;
       margin-right: 4px;
     }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: @blue;
   }
   .footer__block {
     width: 22%;
@@ -78,7 +77,9 @@
     margin-right: 10px;
   }
   .info__btn {
-    position: static;
+    position: relative;
+    top: 0;
+    left: 0;
     opacity: 1;
     z-index: 5;
     transform: none;
@@ -172,11 +173,7 @@
     align-items: center;
   }
   .footer__block--social,
-  .footer__block,
-  .catalog__line .catalog__link,
-  .catalog__line .catalog__btn,
-  .catalog__line .catalog__parameter,
-  .catalog__line .catalog__select {
+  .footer__block {
     width: 45%;
   }
   .order__line,
@@ -207,7 +204,7 @@
     width: 49%;
   }
   .order__block--filter .order__btn {
-    width: 49%;
+    width: 230px;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -307,15 +304,6 @@
   .benefits__item {
     width: 100%;
   }
-  .benefits__icon {
-    width: 56px;
-    height: 56px;
-    margin-right: 10px;
-  }
-  .benefits__text {
-    flex-grow: 1;
-    width: auto;
-  }
   .seria__item {
     height: auto;
     margin-bottom: 12px;
@@ -397,27 +385,6 @@
     padding-bottom: 27px;
     padding-top: 22px;
   }
-//  .info__item:hover .info__img img,
-//  .info__img img {
-//    width: 66px;
-//    height: auto;
-//  }
-//  .info__img {
-//    position: absolute;
-//    top: 16px;
-//    right: 16px;
-//    width: auto;
-//    height: auto;
-//    margin-bottom: 0;
-//  }
-//  .info__item .title-3 {
-//    padding-right: 80px;
-//    text-align: left;
-//    margin-bottom: 10px;
-//  }
-//  .info__text {
-//    text-align: left;
-//  }
   .footer__block {
     margin-bottom: 25px;
   }
@@ -719,10 +686,10 @@
 
 @media (max-width: 480px) {
   .promo__bg {
-    background-image: url(../img/images/img-1-mobile.jpg);
+    padding-left: 0;
+    padding-right: 0;
   }
   .promo__btn {
-    width: 170px;
     margin-top: 22px;
   }
   .logo img {
